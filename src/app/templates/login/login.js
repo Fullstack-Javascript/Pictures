@@ -1,13 +1,13 @@
 import React from 'react';
-//import Content from './component/content';
-console.log("In login page now");
+import LoginPage from './component/loginpage';
 
 var Login = React.createClass(
     {
         render(){
             return(
                 <div>
-                    <h1>Welcome to Pictures</h1>
+                   <LoginPage/>
+
                 </div>
             )
         }

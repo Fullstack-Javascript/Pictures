@@ -28,7 +28,7 @@ var config = {
    },
 
    resolve:{
-       extensions:['','.js','.jsx']
+       extensions:['','.js','.jsx','.css','.html']
    }
 }
 
