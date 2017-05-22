@@ -4,3 +4,16 @@
 .postion-left{
     text-align: left
 }
+.vertical-center {
+    margin-top: 10%
+}
+.header-style {
+    color: green;
+    font-size: xx-large;
+    font-family: cursive;
+}
+.form-style{
+    border: rgba(0, 128, 0, 0.62);
+    border-style: ridge;
+    padding: 3%;
+}

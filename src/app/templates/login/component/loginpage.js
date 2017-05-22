@@ -6,8 +6,10 @@ class LoginPage extends React.Component {
             <div className="postion-center">
                 <form>
                     <Grid>
-                        <Row>
-                            <Col xs={12} md={12}>
+                        <Row className="vertical-center">
+                            <Col xs={4} md={4}>
+                            </Col>
+                            <Col xs={4} md={4} className="form-style">
                             <label className="postion-left"> 
                                 <ControlLabel>User Name:</ControlLabel>
                                 <FormControl type="text" placeholder="User name"/>
@@ -18,7 +20,7 @@ class LoginPage extends React.Component {
                                 <FormControl type="Password" placeholder="Password"/>
                             </label>
                             <br/><br/>
-                            <Button bsStyle="success" class="btn btn-primary btn-lg"> 
+                            <Button bsStyle="success" block> 
                                 Login
                             </Button>
                             </Col>
