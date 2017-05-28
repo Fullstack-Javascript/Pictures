@@ -20,7 +20,8 @@ class LoginPage extends React.Component {
                                 <FormControl type="Password" placeholder="Password"/>
                             </label>
                             <br/><br/>
-                            <Button bsStyle="success" block> 
+                            <button onClick={this.props.validateLogin}>Sonna kekanum</button>
+                            <Button bsStyle="success" block onClick = {this.props.validateLogin}> 
                                 Login
                             </Button>
                             </Col>
@@ -31,4 +32,7 @@ class LoginPage extends React.Component {
         );
     }
 }
+
+
+
 export default LoginPage;
