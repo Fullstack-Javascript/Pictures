@@ -8,30 +8,38 @@ class Login extends React.Component{
             console.log("Inside cons")
             
             this.state={
-                data:{
-                    test:'tested'
+                login:{
+                    response:''
                 }
             };
             this.validateLogin = this.validateLogin.bind(this);   
         }
         validateLogin (e) {  
             var dataToSave = this.state.data;
-            this.setState({data:dataToSave});  
+            //this.setState({data:dataToSave});  
             console.log("Inside validateLogin")
-           /* var that = this;
-            var url = 'http://localhost:5000/validateLogin?username=test&password=test'
+           var that = this;
+            var url = 'http://localhost:5000/validateLogin?username=test&password=podadai'
 
             fetch(url)
             .then(function(response) {
-                if (response.status >= 400) {
+                if (response.status > 200) {
+                    console.log("bad response")
                 throw new Error("Bad response from server");
                 }
                 return response.json();
             })
             .then(function(data) {
-                console.log(data);
-                //that.setState({ person: data.person });
-            });*/
+                if(data){
+                    console.log(data);
+                    //var loginResponse = data;
+                    //var savingData = {};
+                   // savingData.
+                    that.setState({ login: "sucess" });
+                }
+                
+                
+            });
         }
         render(){
             return(

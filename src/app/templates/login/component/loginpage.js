@@ -20,8 +20,7 @@ class LoginPage extends React.Component {
                                 <FormControl type="Password" placeholder="Password"/>
                             </label>
                             <br/><br/>
-                            <button onClick={this.props.validateLogin}>Sonna kekanum</button>
-                            <Button bsStyle="success" block onClick = {this.props.validateLogin}> 
+                            <Button bsStyle="success" block onClick = {this.props.validateLoginProp}> 
                                 Login
                             </Button>
                             </Col>
