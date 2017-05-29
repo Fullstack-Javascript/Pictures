@@ -17,3 +17,8 @@
     border-style: ridge;
     padding: 3%;
 }
+.errorMessage{
+    font-weight: bold;
+    color: red;
+    font-style: italic;
+}
