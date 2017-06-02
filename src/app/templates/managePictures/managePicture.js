@@ -1,39 +1,40 @@
 import React from 'react';
-import {Thumbnail, Grid, Col, Row, Button}  from "react-bootstrap"
+import {Thumbnail, Grid, Col, Row, Button}  from "react-bootstrap";
+import ManagePicturesPage from './component/managePicturePage';
 
 class ManagePictures extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+                userName:"test",
+            };
+            this.getImages = this.getImages.bind(this); 
+            this.imageArray=this.getImages('test');
     }
+    getImages (userName) {
+        var that = this;
+            var url = 'http://localhost:5000/getImages?userName='+this.state.userName
+
+            fetch(url)
+            .then(function(response) {
+                if (response.status > 200) {
+                    that.setState({ login: true });
+                    throw new Error("Bad response from server");
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                if(data){
+                    console.log("data from getImages service: " + data);
+                } 
+            });
+    }
+    
+
     render(){
         return(
             <div>
-                <form>
-                    <h1>Your pictures...</h1>
-                    <Row>
-                        <Col xs={4} md={4}>
-                            <Thumbnail src = "./images/picturesLogo.png" alt="img1">
-                            </Thumbnail>
-                        </Col>
-                        <Col xs={4} md={4}>
-                            <Thumbnail src = "./images/picturesLogo.png" alt="img1">
-                            </Thumbnail>
-                        </Col>
-                        <Col xs={4} md={4}>
-                            <Thumbnail src = "./images/picturesLogo.png" alt="img1">
-                            </Thumbnail>
-                        </Col>
-                    </Row>
-                    {/*<Row>
-                        <Col xs={10} md={10}>
-                        </Col>
-                        <Col xs={2} md={2}>
-                                <Button block>
-                                    Next...
-                                </Button>
-                        </Col>
-                    </Row> */}                   
-                </form>
+                <ManagePicturesPage imagesProp={this.imageArray}/>
             </div>
         )
 
