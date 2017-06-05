@@ -3,6 +3,7 @@ import {Thumbnail, Col, Row} from 'react-bootstrap';
 
 class ManagePicturesPage extends React.Component {
     render () {
+        
         return (
             <div>
                 <form>
